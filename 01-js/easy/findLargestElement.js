@@ -7,6 +7,11 @@
 
 function findLargestElement(numbers) {
     
+    if (numbers.length == 0)
+        return undefined;
+    let max = Math.max(...numbers); //spread function which spreads the elements of array as individual arguements
+    return max;
+
 }
 
 module.exports = findLargestElement;
