@@ -23,4 +23,12 @@ app.get('/errorCount', function(req, res) {
   res.status(200).json({ errorCount });
 });
 
+/*When you declare the app.use function at the end, it serves as a catch-all error handler. 
+This means that it will catch any unhandled errors that occur during the processing of routes 
+and middleware declared above it.
+*/
+app.use(function(err, req, res, next){
+  res.status(404).send({})
+  errorCount = errorCount + 1;
+})
 module.exports = app;
