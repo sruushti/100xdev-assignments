@@ -38,6 +38,106 @@ function Todo({title, description}){
       <p>{description}</p>
     </div>
   )
+
+  
+import './App.css'
+import React, { useState } from 'react';
+
+/*
+renders everything
+function App() {
+  const [title1, setTitle1] = useState('hi');
+  const [title2, setTitle2] = useState('hello');
+
+  const clickHandler = () => {
+    setTitle1 (Math.random());
+  }
+  
+  return (
+    <div>
+      <button onClick={clickHandler}>Click me to change the title</button>
+      <Header title={title1}></Header>
+      <Header title={title2}></Header>
+    </div>
+    //<div> == <> == <React.Fragment>
+  )
+}
+
+function Header({title}) {
+
+  return <div>
+    <div>My name is {title}</div>
+  </div>
+}
+
+using memo to prevent rerendenering
+const Header = React.memo(function({title}) {
+
+  return <div>
+    <div>My name is {title}</div>
+  </div>
+})
+*/
+
+/*
+function App() {
+  return (
+    <div>
+      <UpdateHeader></UpdateHeader>
+      <Header title="My name is hello"/>
+    </div>
+  )
+}
+
+function UpdateHeader(){
+  const [title, setTitle] = useState('hi');
+
+  function clickHandler() {
+    setTitle("My name is "+Math.random());
+  }
+
+  return (
+    <div>
+      <button onClick={clickHandler}>Click to change the title</button>
+      <Header title={title}></Header>
+    </div>
+  )
+}
+
+function Header({title}){
+  return (
+    <div>
+      {title}
+    </div>
+  )
+}
+
+export default App
+
+//CardWrapper
+
+function App(){
+  return <div>
+    <CardWrapper innerComponent={<TextComponent/>} />
+  </div>
+}
+
+function TextComponent() {
+  return <div>
+    hi
+  </div>
+}
+
+function CardWrapper({innerComponent}){
+  return (
+    <div style={{border: "2px solid black"}}>
+      {innerComponent}
+    </div>
+  )
+}
+
+export default App
+
 }*/
 let counter=2;
 function App(){
